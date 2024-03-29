@@ -1,6 +1,5 @@
 package org.example;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -8,7 +7,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class inputDTO {
+public class InputDTO {
     private final int x;
     private int y;
     private int z;
@@ -16,7 +15,7 @@ public class inputDTO {
     private int n;
     private int p;
     private int q;
-    private inputDTO(Builder builder) {
+    private InputDTO(Builder builder) {
         this.x = builder.x;
         this.y = builder.y;
         this.z = builder.z;
@@ -59,8 +58,8 @@ public class inputDTO {
             this.p = p;
             return this;
         }
-        public inputDTO build() {
-            return new inputDTO(this);
+        public InputDTO build() {
+            return new InputDTO(this);
         }
     }
 

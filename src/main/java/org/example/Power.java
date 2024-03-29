@@ -1,9 +1,9 @@
 package org.example;
 
-public class power implements caculate{
-    private caculate caculate;
+public class Power implements Caculate {
+    private Caculate caculate;
     @Override
-    public String cal(inputDTO input){
+    public String cal(InputDTO input){
         int i = input.getX();
         int j = input.getY();
         int result = 1;

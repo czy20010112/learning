@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class target {
+public class Target {
     private int  people;
     private double animal;
     private String name;
