@@ -26,6 +26,7 @@ public class TestMode {
 
     private void testReflect(String msg) {
         System.out.println(msg);
+        System.out.println();
     }
 
     @Override

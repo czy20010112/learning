@@ -1,10 +1,10 @@
 package org.example;
 
-public class BigAdd implements caculate{
-    private caculate caculate;
+public class BigAdd implements Caculate {
+    private Caculate caculate;
 
     @Override
-    public String cal(inputDTO input) {
+    public String cal(InputDTO input) {
         int i = input.getX();
         int j = input.getY();
         int result = 0;

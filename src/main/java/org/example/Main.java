@@ -7,7 +7,7 @@ import java.lang.reflect.Modifier;
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
 public class Main {
-    public static void SToT(source i, target j){
+    public static void SToT(Source i, Target j){
         j.setAnimal(i.getAnimal());
         j.setPeople(i.getPeople());
         j.setName("调用赋值成功");
@@ -44,18 +44,21 @@ public class Main {
             }
         }
 
-        source test1 =new source.Builder(1)
+        Source test1 =new Source.Builder(1)
                 .animal(2)
                 .name(222221)
                 .build();
-        target test2 =new target();
+        Target test2 =new Target();
         SToT(test1,test2);
         System.out.print(test1);
-        inputDTO input = new inputDTO.Builder(20)
+        InputDTO input = new InputDTO.Builder(20)
                 .y(5)
                 .build();
+        Caculate b = new BigAdd();
+        Caculate c = new Power();
 
-
+        System.out.print(b.cal(input));
+        System.out.print(c.cal(input));
 
 
     }

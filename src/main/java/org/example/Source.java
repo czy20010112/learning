@@ -1,19 +1,17 @@
 package org.example;
 
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 @Setter
 @Getter
 @ToString
-@Builder
-public class source {
+public class Source {
     private final int people;
     private double animal;
     private int name;
-    private source(Builder builder) {
+    private Source(Builder builder) {
         this.people = builder.people;
         this.animal = builder.animal;
         this.name = builder.name;
@@ -37,8 +35,8 @@ public class source {
             return this;
         }
 
-        public source build() {
-            return new source(this);
+        public Source build() {
+            return new Source(this);
         }
     }
 }
