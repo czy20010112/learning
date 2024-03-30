@@ -1,7 +1,7 @@
 package org.example;
 
-public class BigAdd implements Caculate {
-    private Caculate caculate;
+public class BigAdd implements Calculate {
+    private Calculate calculate;
 
     @Override
     public String cal(InputDTO input) {

@@ -1,5 +1,5 @@
 package org.example;
 
-public interface Caculate {
+public interface Calculate {
     String cal(InputDTO input);
 }

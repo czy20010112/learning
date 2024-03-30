@@ -1,7 +1,7 @@
 package org.example;
 
-public class Power implements Caculate {
-    private Caculate caculate;
+public class Power implements Calculate {
+    private Calculate calculate;
     @Override
     public String cal(InputDTO input){
         int i = input.getX();
