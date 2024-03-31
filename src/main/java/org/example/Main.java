@@ -3,6 +3,10 @@ package org.example;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 //TIP 要<b>运行</b>代码，请按 <shortcut actionId="Run"/> 或
 // 点击装订区域中的 <icon src="AllIcons.Actions.Execute"/> 图标。
@@ -37,7 +41,7 @@ public class Main {
             if (modifiers == Modifier.PRIVATE && types.length == 1) {
                 try {
 
-                    method.invoke(testMode, "我要开始调用1方法了" + method.getName());
+                    method.invoke(testMode, "我要开始调用方法了" + method.getName());
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
@@ -50,16 +54,37 @@ public class Main {
                 .build();
         Target test2 =new Target();
         SToT(test1,test2);
-        System.out.print(test1);
+        System.out.print(test1+"\n");
         InputDTO input = new InputDTO.Builder(20)
                 .y(5)
+                .q(4)
+                .p(2)
                 .build();
-        Caculate b = new BigAdd();
-        Caculate c = new Power();
+        Calculate a = new Rooting();
+        Calculate b = new BigAdd();
+        Calculate c = new Power();
 
-        System.out.print(b.cal(input));
-        System.out.print(c.cal(input));
-
-
+        System.out.print(b.cal(input)+"\n");
+        System.out.print(c.cal(input)+"\n");
+        String key1 = "Rooting";
+        String key2 = "BigAdd";
+        String key3 = "Power";
+        List<String> method = new ArrayList<>();
+        List<String> resultList = new ArrayList<>();
+        method.add(key1);
+        method.add(key2);
+        method.add(key3);
+        Map<String,Calculate> elementMap = new HashMap<>();
+        elementMap.put(key1,a);
+        elementMap.put(key2,b);
+        elementMap.put(key3,c);
+        for (String key:method)
+        {
+            String result = elementMap.get(key).cal(input);
+            System.out.print(result+"\n");
+            resultList.add(result);
+        }
+        System.out.println(resultList+"\n");
+        System.out.print("计算完成，安全退出");
     }
 }

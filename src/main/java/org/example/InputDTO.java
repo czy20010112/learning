@@ -13,8 +13,8 @@ public class InputDTO {
     private int z;
     private int m;
     private int n;
-    private int p;
-    private int q;
+    private double p;
+    private double q;
     private InputDTO(Builder builder) {
         this.x = builder.x;
         this.y = builder.y;
@@ -31,8 +31,8 @@ public class InputDTO {
         private int z;
         private int m;
         private int n;
-        private int p;
-        private int q;
+        private double p;
+        private double q;
         public Builder(int x)
         {
             this.x = x;
@@ -54,8 +54,12 @@ public class InputDTO {
             this.n = n;
             return this;
         }
-        public Builder p(int p){
+        public Builder p(double p){
             this.p = p;
+            return this;
+        }
+        public Builder q(double q){
+            this.q = q;
             return this;
         }
         public InputDTO build() {
